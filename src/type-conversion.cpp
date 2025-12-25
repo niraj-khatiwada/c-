@@ -17,5 +17,17 @@ int main()
     int ch = 'A';
     std::cout << ch << "\n";
 
+    // string to int
+    auto agei = std::stoi("100");
+    std::cout << agei << "|" << typeid(agei).name() << "\n";
+
+    // string to double
+    auto aged = std::stod("100.0");
+    std::cout << aged << "|" << typeid(aged).name() << "\n";
+
+    // int to character
+    auto ch = (char)65;
+    std::cout << ch << "|" << typeid(ch).name() << "\n";
+
     return 0;
 }
