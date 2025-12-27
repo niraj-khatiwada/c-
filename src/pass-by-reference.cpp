@@ -34,7 +34,6 @@ void swap(std::string &a, std::string &b)
 }
 
 // const parameter: make parameter read only
-
 void log(const std::string &a, const std::string &b)
 {
     // a = "asas"; // ❌
