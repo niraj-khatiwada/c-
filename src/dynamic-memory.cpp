@@ -23,5 +23,5 @@ int main()
     }
     std::cout << "\n";
 
-    delete grades; // make sure to delete the memory to free up.
+    delete[] grades; // make sure to delete the memory to free up.
 }
