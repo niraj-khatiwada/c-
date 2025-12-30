@@ -7,6 +7,13 @@ int sum_and_increment_by_1(int* a, int* b) {
   return result;
 }
 
+struct Point {
+  int x;
+  int y;
+
+  void log_point() { std::printf("(%d, %d)\n", x, y); }
+};
+
 int main() {
   // Reference points the value within the address
   // Pointer points the address in memory.
@@ -59,4 +66,21 @@ int main() {
     std::cout << foods[i] << "\n";
     std::cout << pFoods[i] << "\n";
   }
+
+  Point p = {.x = 10, .y = 100};
+  Point* ptr = &p;
+
+  // there're 2 ways to access the struct members from pointer
+  // method 1:
+
+  std::cout << (*ptr).x << "\n";
+  (*ptr).x = 11;
+  (*ptr).log_point();
+
+  // method 2: preferred
+  // we can use -> instead of . for pointer to access struct members
+  // -> means implicit dereferencing i.e ptr->y is same as *(ptr).y
+  std::cout << ptr->x << "\n";
+  ptr->y = 101;
+  ptr->log_point();
 }
