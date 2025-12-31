@@ -1,2 +1,6 @@
 ReferenceAlignment: Left
 PointerAlignment: Left
+
+AllowShortFunctionsOnASingleLine: Inline
+AllowShortBlocksOnASingleLine: Always
+ColumnLimit: 0
